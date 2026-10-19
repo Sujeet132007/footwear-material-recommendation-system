@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Footwear Material Recommendation</title>
+
+    <!-- Final Page CSS -->
+    <link rel="stylesheet" href="../static/css/final_page.css">
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         MAIN APPLICATION
+    ====================================================== -->
+
+    <div class="app">
+
+
+        <!-- =================================================
+             LEFT SIDEBAR
+        ================================================== -->
+
+        <aside class="sidebar">
+
+            <!-- Brand -->
+            <div class="brand">
+
+                <div class="brand-icon">
+                    F
+                </div>
+
+                <div class="brand-text">
+                    <h2>FOOTWEAR</h2>
+                    <span>Material Recommendation</span>
+                </div>
+
+            </div>
+
+
+            <!-- Category Heading -->
+            <div class="sidebar-heading">
+                WORK ENVIRONMENT
+            </div>
+
+
+            <!-- Categories will be created by JS -->
+            <nav id="category-menu" class="category-menu">
+
+                <!--
+                    JavaScript will generate:
+
+                    Army
+                       Army
+                       Navy
+                       Air Force
+                       NSG
+
+                    Athletic
+                       Running
+                       Football
+                       ...
+                -->
+
+            </nav>
+
+
+            <!-- Bottom AI Status -->
+            <div class="sidebar-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>AI SYSTEM</strong>
+                    <small>Ready for recommendation</small>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT
+        ================================================== -->
+
+        <main class="main-content">
+
+
+            <!-- =================================================
+                 TOP BAR
+            ================================================== -->
+
+            <header class="top-bar">
+
+                <div class="breadcrumb">
+
+                    <span>Category</span>
+
+                    <span class="breadcrumb-arrow">
+                        /
+                    </span>
+
+                    <strong id="breadcrumb-category">
+                        Subcategory
+                    </strong>
+
+                </div>
+
+
+                <div class="system-status">
+
+                    <span class="status-dot"></span>
+
+                    Material Recommendation System
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =================================================
+                 PAGE HEADER
+            ================================================== -->
+
+            <section class="page-header">
+
+                <div>
+
+                    <span class="section-label">
+                        CUSTOM FOOTWEAR DESIGN
+                    </span>
+
+                    <h1 id="category-title">
+                        Select Category
+                    </h1>
+
+                    <p id="category-description">
+                        Select a work environment to design suitable
+                        footwear for that environment.
+                    </p>
+
+                </div>
+
+
+                <!-- Selected Subcategory -->
+                <div class="selected-design">
+
+                    <span>
+                        SELECTED DESIGN
+                    </span>
+
+                    <strong id="selected-subcategory">
+                        None
+                    </strong>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 MAIN DESIGN AREA
+            ================================================== -->
+
+            <section class="design-area">
+
+
+                <!-- =================================================
+                     SHOE VISUALIZATION
+                ================================================== -->
+
+                <div class="shoe-panel">
+
+
+                    <!-- Panel Header -->
+                    <div class="panel-header">
+
+                        <div>
+
+                            <span class="section-label">
+                                FOOTWEAR VISUALIZATION
+                            </span>
+
+                            <h2 id="visualization-title">
+                                Select a subcategory
+                            </h2>
+
+                        </div>
+
+
+                        <button
+                            id="reset-button"
+                            class="reset-button"
+                            type="button">
+
+                            Reset
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         SHOE STAGE
+                    ================================================== -->
+
+                    <div
+                        id="shoe-stage"
+                        class="shoe-stage">
+
+
+                        <!--
+                            =================================================
+                            SHOE IMAGE
+                            =================================================
+
+                            JavaScript will insert the selected
+                            subcategory's shoe image here.
+
+                            Example:
+
+                            Tracking → Hiking
+                            ↓
+                            hiking.png
+
+                            Farming → Wet Farming
+                            ↓
+                            wet-farming.png
+                        -->
+
+                        <div
+                            id="shoe-image-container"
+                            class="shoe-image-container">
+
+                            <div class="shoe-placeholder">
+
+                                <div class="placeholder-icon">
+                                    👟
+                                </div>
+
+                                <strong>
+                                    Select a subcategory
+                                </strong>
+
+                                <span>
+                                    Your footwear design will appear here
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =================================================
+                             SVG CONNECTION LAYER
+                        ================================================== -->
+
+                        <svg
+                            id="callout-lines"
+                            class="callout-lines"
+                            viewBox="0 0 1000 650"
+                            preserveAspectRatio="none">
+
+                            <!--
+                                JavaScript will create lines here.
+
+                                Example:
+
+                                Upper
+                                  \
+                                   \________ Upper
+
+                                Midsole
+                                  \
+                                   \________ Midsole
+
+                                Outsole
+                                  \
+                                   \________ Outsole
+                            -->
+
+                        </svg>
+
+
+
+                        <!-- =================================================
+                             MATERIAL CALLOUTS
+                        ================================================== -->
+
+                        <div
+                            id="callouts-container"
+                            class="callouts-container">
+
+                            <!--
+                                JavaScript will create callouts here.
+
+                                Example:
+
+                                ┌──────────────────────┐
+                                │ +  Upper             │
+                                │                      │
+                                │ 1. Synthetic Leather │
+                                │ 2. Mesh              │
+                                │ 3. TPU               │
+                                └──────────────────────┘
+
+                                Connected by SVG line to
+                                actual Upper area.
+                            -->
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     RIGHT INFORMATION PANEL
+                ================================================== -->
+
+                <aside class="information-panel">
+
+
+                    <!-- =================================================
+                         SELECTED FOOTWEAR
+                    ================================================== -->
+
+                    <div class="info-card selected-footwear-card">
+
+                        <span class="section-label">
+                            SELECTED FOOTWEAR
+                        </span>
+
+                        <h3 id="info-subcategory">
+                            None
+                        </h3>
+
+                        <p id="info-category">
+                            No category selected
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         REQUIREMENTS
+                    ================================================== -->
+
+                    <div class="info-card">
+
+                        <span class="section-label">
+                            REQUIREMENTS
+                        </span>
+
+                        <h3>
+                            Performance
+                        </h3>
+
+
+                        <div
+                            id="requirements-container"
+                            class="requirements-container">
+
+                            <!--
+                                JS will generate:
+
+                                Grip
+                                ████████████
+                                Very High
+
+                                Comfort
+                                █████████
+                                High
+
+                                etc.
+                            -->
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =================================================
+                         COMPONENT DETAILS
+                    ================================================== -->
+
+                    <div class="info-card component-info-card">
+
+                        <span class="section-label">
+                            SELECTED PARTS
+                        </span>
+
+                        <h3>
+                            Components
+                        </h3>
+
+
+                        <div
+                            id="components-container"
+                            class="components-container">
+
+                            <!--
+                                JS will generate only the components
+                                applicable to the selected subcategory.
+
+                                Example:
+
+                                Upper
+                                + 
+
+                                Lining
+                                +
+
+                                Insole
+                                +
+
+                                Midsole
+                                +
+
+                                Outsole
+                                +
+                            -->
+
+                        </div>
+
+                    </div>
+
+
+                </aside>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 COMPLETE MATERIAL RECOMMENDATIONS
+            ================================================== -->
+
+            <section
+                id="complete-recommendations"
+                class="complete-recommendations">
+
+
+                <div class="recommendation-header">
+
+                    <div>
+
+                        <span class="section-label">
+                            MATERIAL RESULTS
+                        </span>
+
+                        <h2>
+                            Complete Material Recommendations
+                        </h2>
+
+                        <p>
+                            Top recommended materials for the selected
+                            footwear components.
+                        </p>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         IMPORTANT ML BUTTON
+                    ================================================== -->
+
+                    <button
+                        id="recommendation-btn"
+                        class="recommendation-button"
+                        type="button">
+
+                        <span>
+                            +
+                        </span>
+
+                        Get Material Recommendation
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ML LOADING
+                ================================================== -->
+
+                <div
+                    id="recommendation-loading"
+                    class="recommendation-loading"
+                    style="display: none;">
+
+                    <div class="loading-spinner"></div>
+
+                    <span>
+                        Getting material recommendations...
+                    </span>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     ML RESULTS
+                ================================================== -->
+
+                <div
+                    id="recommendation-results"
+                    class="recommendation-results">
+
+                    <!--
+
+                        IMPORTANT:
+
+                        JavaScript will generate the result cards
+                        after Flask + KNN returns the prediction.
+
+                        Example:
+
+                        ┌─────────────┐
+                        │   UPPER     │
+                        │             │
+                        │ 1 Synthetic │
+                        │ 2 Mesh      │
+                        │ 3 TPU       │
+                        └─────────────┘
+
+
+                        ┌─────────────┐
+                        │   OUTSOLE   │
+                        │             │
+                        │ 1 Rubber    │
+                        │ 2 TPR       │
+                        │ 3 PU        │
+                        └─────────────┘
+
+                    -->
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =================================================
+                 FOOTER
+            ================================================== -->
+
+            <footer class="footer">
+
+                <span>
+                    Smarter Materials
+                </span>
+
+                <span>|</span>
+
+                <span>
+                    Better Footwear
+                </span>
+
+                <span>|</span>
+
+                <span>
+                    For a Stronger You
+                </span>
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         COMPONENT DETAILS MODAL
+    ====================================================== -->
+
+    <div
+        id="detail-modal"
+        class="modal">
+
+
+        <div class="modal-content">
+
+
+            <button
+                class="modal-close"
+                type="button">
+
+                ×
+
+            </button>
+
+
+            <span class="section-label">
+                COMPONENT DETAILS
+            </span>
+
+
+            <h2 id="modal-component-name">
+                Component
+            </h2>
+
+
+            <p id="modal-component-description">
+                Component information will appear here.
+            </p>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="../static/js/final_page.js"></script>
+
+</body>
+
+</html>

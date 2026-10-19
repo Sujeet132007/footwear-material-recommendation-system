@@ -1,0 +1,1912 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #070b0f;
+    color: #eaf2f5;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+.app {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+
+/* =========================================================
+   SIDEBAR
+========================================================= */
+
+.sidebar {
+    width: 245px;
+    min-width: 245px;
+
+    height: 100vh;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #080d12;
+
+    border-right: 1px solid #17242d;
+
+    padding: 24px 16px 18px;
+
+    z-index: 100;
+}
+
+
+/* =========================================================
+   BRAND
+========================================================= */
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 4px 5px 22px;
+
+    border-bottom: 1px solid #18242c;
+}
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #6bea8c;
+
+    color: #071009;
+
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.brand-text h2 {
+    font-size: 14px;
+    letter-spacing: 0.7px;
+
+    color: #f3f8f9;
+}
+
+.brand-text span {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 8px;
+
+    color: #73838c;
+
+    letter-spacing: 0.4px;
+}
+
+
+/* =========================================================
+   SIDEBAR HEADING
+========================================================= */
+
+.sidebar-heading {
+    margin: 25px 5px 11px;
+
+    font-size: 9px;
+
+    color: #71818a;
+
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+
+/* =========================================================
+   CATEGORY MENU
+========================================================= */
+
+.category-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    overflow-y: auto;
+
+    padding: 2px 4px 4px 2px;
+
+    scrollbar-width: thin;
+    scrollbar-color: #263d48 transparent;
+}
+
+.category-menu::-webkit-scrollbar {
+    width: 4px;
+}
+
+.category-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.category-menu::-webkit-scrollbar-thumb {
+    background: #263d48;
+    border-radius: 10px;
+}
+
+
+/* =========================================================
+   CATEGORY ITEM
+========================================================= */
+
+.category-item {
+    width: 100%;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   MAIN CATEGORY BUTTON
+========================================================= */
+
+.category-button {
+    width: 100%;
+    min-height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 11px;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    background: rgba(11, 20, 27, 0.55);
+
+    color: #8d9da5;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border 0.25s ease,
+        color 0.25s ease,
+        transform 0.2s ease;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 0.15px;
+}
+
+
+/* Hover */
+
+.category-button:hover {
+    background: #101e27;
+
+    border-color: #1d3946;
+
+    color: #e8f2f5;
+
+    transform: translateX(2px);
+}
+
+
+/* Active category */
+
+.category-item.active > .category-button {
+    background:
+        linear-gradient(
+            90deg,
+            #102d3d 0%,
+            #0d202b 100%
+        );
+
+    border-color: #18506a;
+
+    color: #ffffff;
+
+    box-shadow:
+        inset 3px 0 0 #4ce27c,
+        0 5px 18px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   CATEGORY LEFT AREA
+========================================================= */
+
+.category-main {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   CATEGORY ICON
+========================================================= */
+
+.category-icon {
+    width: 27px;
+    height: 27px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #10212a;
+
+    border: 1px solid #1c333e;
+
+    color: #62e58a;
+
+    font-size: 12px;
+
+    transition:
+        background 0.25s ease,
+        border 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+/* Icon hover */
+
+.category-button:hover .category-icon {
+    background: #15303b;
+
+    border-color: #2a5665;
+
+    transform: scale(1.05);
+}
+
+
+/* Icon active */
+
+.category-item.active .category-icon {
+    background: #123344;
+
+    border-color: #27718a;
+
+    color: #70f096;
+
+    box-shadow:
+        0 0 12px rgba(67, 219, 129, 0.08);
+}
+
+
+/* =========================================================
+   CATEGORY NAME
+========================================================= */
+
+.category-main span:last-child {
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================================
+   CATEGORY ARROW
+========================================================= */
+
+.category-arrow {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 6px;
+
+    color: #526771;
+
+    font-size: 13px;
+
+    transition:
+        transform 0.3s ease,
+        color 0.25s ease,
+        background 0.25s ease;
+}
+
+
+/* Hover arrow */
+
+.category-button:hover .category-arrow {
+    color: #9fb4bc;
+
+    background: #15262e;
+}
+
+
+/* Expanded arrow */
+
+.category-item.expanded .category-arrow {
+    transform: rotate(90deg);
+
+    color: #6ee992;
+}
+
+
+/* =========================================================
+   SUBCATEGORY LIST
+========================================================= */
+
+.subcategory-list {
+    display: none;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    margin: 3px 0 5px 15px;
+
+    padding: 5px 4px 5px 18px;
+
+    border-left: 1px solid #1b3440;
+
+    animation: subcategoryOpen 0.22s ease;
+}
+
+.category-item.expanded .subcategory-list {
+    display: flex;
+}
+
+
+/* =========================================================
+   SUBCATEGORY OPEN ANIMATION
+========================================================= */
+
+@keyframes subcategoryOpen {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   SUBCATEGORY BUTTON
+========================================================= */
+
+.subcategory-button {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 32px;
+
+    padding: 7px 10px 7px 13px;
+
+    border: 1px solid transparent;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: #667b85;
+
+    text-align: left;
+
+    font-size: 10px;
+
+    font-weight: 400;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================================
+   SUBCATEGORY CONNECTING DOT
+========================================================= */
+
+.subcategory-button::before {
+    content: "";
+
+    position: absolute;
+
+    left: -22px;
+
+    top: 50%;
+
+    width: 6px;
+    height: 6px;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: #263f4b;
+
+    border: 2px solid #091117;
+
+    transition:
+        background 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================================
+   SUBCATEGORY HOVER
+========================================================= */
+
+.subcategory-button:hover {
+    background: #0e1c24;
+
+    border-color: #18333f;
+
+    color: #d6e4e8;
+
+    transform: translateX(2px);
+}
+
+.subcategory-button:hover::before {
+    background: #4ca6ce;
+
+    transform:
+        translateY(-50%)
+        scale(1.15);
+}
+
+
+/* =========================================================
+   ACTIVE SUBCATEGORY
+========================================================= */
+
+.subcategory-button.active {
+    background:
+        linear-gradient(
+            90deg,
+            #102c3a 0%,
+            #0c1e28 100%
+        );
+
+    border-color: #19485a;
+
+    color: #7eea9a;
+
+    font-weight: 600;
+
+    box-shadow:
+        inset 2px 0 0 #54df7d;
+}
+
+
+.subcategory-button.active::before {
+    background: #53e28a;
+
+    box-shadow:
+        0 0 8px rgba(83, 226, 138, 0.55);
+
+    transform:
+        translateY(-50%)
+        scale(1.15);
+}
+
+
+/* =========================================================
+   SUBCATEGORY TEXT
+========================================================= */
+
+.subcategory-button {
+    letter-spacing: 0.1px;
+}
+
+
+/* =========================================================
+   CATEGORY + SUBCATEGORY FOCUS
+========================================================= */
+
+.category-button:focus-visible,
+.subcategory-button:focus-visible {
+    outline: none;
+
+    border-color: #2b718a;
+
+    box-shadow:
+        0 0 0 2px rgba(43, 113, 138, 0.18);
+}
+
+
+/* =========================================================
+   SMALL SCREEN ADJUSTMENT
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .category-menu {
+        max-height: 320px;
+    }
+
+    .category-button {
+        min-height: 44px;
+    }
+
+    .subcategory-button {
+        min-height: 34px;
+    }
+
+}
+
+/* =========================================================
+   SIDEBAR STATUS
+========================================================= */
+
+.sidebar-status {
+    margin-top: auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 12px 10px;
+
+    border: 1px solid #1b2931;
+
+    border-radius: 9px;
+
+    background: #0b1116;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #65e88b;
+
+    box-shadow: 0 0 9px rgba(101, 232, 139, 0.55);
+
+    flex-shrink: 0;
+}
+
+.sidebar-status strong {
+    display: block;
+
+    font-size: 8px;
+
+    color: #d9e4e7;
+
+    letter-spacing: 0.5px;
+}
+
+.sidebar-status small {
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 7px;
+
+    color: #62747d;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+========================================================= */
+
+.main-content {
+    width: calc(100% - 245px);
+
+    margin-left: 245px;
+
+    padding: 0 25px 30px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   TOP BAR
+========================================================= */
+
+.top-bar {
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid #131f27;
+}
+
+.breadcrumb {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 10px;
+
+    color: #667982;
+}
+
+.breadcrumb strong {
+    color: #d8e5e9;
+}
+
+.breadcrumb-arrow {
+    color: #35464e;
+}
+
+.system-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 8px;
+
+    color: #6b7c84;
+}
+
+
+/* =========================================================
+   PAGE HEADER
+========================================================= */
+
+.page-header {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    padding: 28px 4px 25px;
+}
+
+.section-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #5be47d;
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+.page-header h1 {
+    font-size: 29px;
+
+    line-height: 1.1;
+
+    color: #f2f8fa;
+}
+
+.page-header p {
+    margin-top: 8px;
+
+    max-width: 650px;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    color: #71838c;
+}
+
+
+/* =========================================================
+   SELECTED DESIGN
+========================================================= */
+
+.selected-design {
+    min-width: 150px;
+
+    padding: 12px 15px;
+
+    border: 1px solid #1c2a32;
+
+    border-radius: 9px;
+
+    background: #0d141a;
+}
+
+.selected-design span {
+    display: block;
+
+    font-size: 7px;
+
+    color: #66808a;
+
+    letter-spacing: 1px;
+}
+
+.selected-design strong {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #69eb8b;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   DESIGN AREA
+========================================================= */
+
+.design-area {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 285px;
+
+    gap: 14px;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   SHOE PANEL
+========================================================= */
+
+.shoe-panel {
+    min-width: 0;
+
+    border: 1px solid #1d2b34;
+
+    border-radius: 11px;
+
+    background: #0c1218;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.panel-header {
+    min-height: 61px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 12px 15px;
+
+    border-bottom: 1px solid #1a2730;
+}
+
+.panel-header h2 {
+    font-size: 13px;
+
+    color: #edf4f6;
+}
+
+
+/* Reset */
+
+.reset-button {
+    padding: 7px 12px;
+
+    border: 1px solid #293840;
+
+    border-radius: 6px;
+
+    background: #111a20;
+
+    color: #8b9ba2;
+
+    font-size: 8px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.reset-button:hover {
+    color: #ffffff;
+
+    border-color: #49616c;
+}
+
+
+/* =========================================================
+   SHOE STAGE
+========================================================= */
+
+.shoe-stage {
+    position: relative;
+
+    width: 100%;
+
+    min-height: 560px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #15222b 0%,
+            #0c1319 55%,
+            #080d12 100%
+        );
+}
+
+
+/* =========================================================
+   SHOE IMAGE
+========================================================= */
+
+.shoe-image-container {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 70%;
+    height: 75%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+}
+
+.shoe-image-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter: drop-shadow(
+        0 25px 30px rgba(0, 0, 0, 0.55)
+    );
+}
+
+
+/* =========================================================
+   PLACEHOLDER
+========================================================= */
+
+.shoe-placeholder {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    color: #6c7e86;
+
+    text-align: center;
+}
+
+.placeholder-icon {
+    font-size: 45px;
+
+    opacity: 0.45;
+}
+
+.shoe-placeholder strong {
+    font-size: 12px;
+
+    color: #a5b5bb;
+}
+
+.shoe-placeholder span {
+    font-size: 9px;
+
+    color: #586970;
+}
+
+
+/* =========================================================
+   SVG CONNECTION LAYER
+========================================================= */
+
+.callout-lines {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    z-index: 4;
+
+    pointer-events: none;
+
+    overflow: visible;
+}
+
+.callout-lines line,
+.callout-lines polyline {
+    fill: none;
+
+    stroke-width: 2;
+
+    vector-effect: non-scaling-stroke;
+
+    opacity: 0.9;
+}
+
+.callout-lines circle {
+    stroke-width: 2;
+
+    vector-effect: non-scaling-stroke;
+}
+
+
+/* =========================================================
+   CALLOUT CONTAINER
+========================================================= */
+
+.callouts-container {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 6;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   CALLOUT
+========================================================= */
+
+.material-callout {
+    position: absolute;
+
+    width: 155px;
+
+    min-height: 100px;
+
+    padding: 11px 12px;
+
+    border: 1px solid #29404a;
+
+    border-radius: 10px;
+
+    background: rgba(8, 16, 21, 0.94);
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35);
+
+    pointer-events: auto;
+
+    animation: calloutAppear 0.3s ease;
+}
+
+@keyframes calloutAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   CALLOUT HEADER
+========================================================= */
+
+.callout-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 9px;
+}
+
+.callout-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+.callout-icon {
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #17303a;
+
+    color: #72e993;
+
+    font-size: 9px;
+}
+
+.callout-title h3 {
+    font-size: 11px;
+
+    color: #e8f1f4;
+}
+
+
+/* =========================================================
+   PLUS BUTTON
+========================================================= */
+
+.callout-more {
+    width: 19px;
+    height: 19px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+
+    border-radius: 50%;
+
+    background: #1d3944;
+
+    color: #a4eab7;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    transition: 0.2s;
+}
+
+.callout-more:hover {
+    background: #2c5664;
+
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   MATERIAL LIST
+========================================================= */
+
+.material-list {
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.material-list li {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #bdcbd0;
+
+    font-size: 9px;
+
+    line-height: 1.35;
+}
+
+.material-number {
+    color: #68e98b;
+
+    font-weight: 700;
+
+    min-width: 11px;
+}
+
+
+/* =========================================================
+   CALLOUT POSITIONS
+   JS can use these classes
+========================================================= */
+
+.callout-upper {
+    left: 58%;
+    top: 18%;
+}
+
+.callout-lining {
+    left: 13%;
+    top: 10%;
+}
+
+.callout-insole {
+    left: 12%;
+    bottom: 13%;
+}
+
+.callout-midsole {
+    left: 43%;
+    bottom: 5%;
+}
+
+.callout-outsole {
+    right: 5%;
+    bottom: 9%;
+}
+
+.callout-toe-cap {
+    right: 7%;
+    top: 37%;
+}
+
+
+/* =========================================================
+   INFORMATION PANEL
+========================================================= */
+
+.information-panel {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   INFO CARD
+========================================================= */
+
+.info-card {
+    border: 1px solid #1c2b33;
+
+    border-radius: 10px;
+
+    background: #0b1218;
+
+    padding: 14px;
+}
+
+.info-card h3 {
+    margin-bottom: 12px;
+
+    font-size: 12px;
+
+    color: #eef5f6;
+}
+
+.info-card p {
+    font-size: 9px;
+
+    line-height: 1.5;
+
+    color: #71838b;
+}
+
+
+/* =========================================================
+   SELECTED FOOTWEAR
+========================================================= */
+
+.selected-footwear-card {
+    padding-bottom: 16px;
+}
+
+.selected-footwear-card h3 {
+    color: #69eb8c;
+
+    margin-bottom: 5px;
+}
+
+.selected-footwear-card p {
+    color: #5f717a;
+}
+
+
+/* =========================================================
+   REQUIREMENTS
+========================================================= */
+
+.requirements-container {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.requirement-item {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.requirement-top {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.requirement-name {
+    font-size: 8px;
+
+    color: #788a92;
+}
+
+.requirement-value {
+    font-size: 8px;
+
+    color: #6dea8b;
+
+    font-weight: 700;
+}
+
+.requirement-bar {
+    height: 6px;
+
+    border-radius: 5px;
+
+    background: #142229;
+
+    overflow: hidden;
+}
+
+.requirement-fill {
+    height: 100%;
+
+    border-radius: inherit;
+
+    background: #3fd778;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================================================
+   COMPONENTS
+========================================================= */
+
+.components-container {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.component-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 8px 9px;
+
+    border: 1px solid #17262e;
+
+    border-radius: 7px;
+
+    background: #0d171d;
+}
+
+.component-item span {
+    font-size: 9px;
+
+    color: #b8c7cc;
+}
+
+.component-item button {
+    width: 19px;
+    height: 19px;
+
+    border: 1px solid #29404a;
+
+    border-radius: 50%;
+
+    background: #10212a;
+
+    color: #73df92;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   COMPLETE RECOMMENDATIONS
+========================================================= */
+
+.complete-recommendations {
+    margin-top: 14px;
+
+    padding: 17px;
+
+    border: 1px solid #1d2c35;
+
+    border-radius: 11px;
+
+    background: #0b1218;
+}
+
+
+/* Header */
+
+.recommendation-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.recommendation-header h2 {
+    font-size: 15px;
+
+    color: #eef5f7;
+}
+
+.recommendation-header p {
+    margin-top: 5px;
+
+    font-size: 8px;
+
+    color: #667982;
+}
+
+
+/* =========================================================
+   ML BUTTON
+========================================================= */
+
+.recommendation-button {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 11px 15px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    background: #65e98a;
+
+    color: #061009;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.2s ease;
+}
+
+.recommendation-button:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 20px rgba(101, 233, 138, 0.2);
+}
+
+.recommendation-button:active {
+    transform: translateY(0);
+}
+
+.recommendation-button span {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.recommendation-loading {
+    margin-top: 15px;
+
+    min-height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    border: 1px dashed #263a44;
+
+    border-radius: 8px;
+
+    color: #7c8f97;
+
+    font-size: 9px;
+}
+
+.loading-spinner {
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #263b45;
+
+    border-top-color: #69e98b;
+
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   RECOMMENDATION RESULTS
+========================================================= */
+
+.recommendation-results {
+    margin-top: 15px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(145px, 1fr));
+
+    gap: 10px;
+}
+
+
+/* Result card */
+
+.result-card {
+    min-height: 120px;
+
+    padding: 13px;
+
+    border: 1px solid #1b303b;
+
+    border-radius: 9px;
+
+    background: #0c171e;
+}
+
+.result-card h3 {
+    margin-bottom: 10px;
+
+    font-size: 10px;
+
+    color: #65e88a;
+}
+
+.result-card ul {
+    list-style: none;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+.result-card li {
+    font-size: 9px;
+
+    color: #b8c8cd;
+}
+
+.result-rank {
+    margin-right: 5px;
+
+    color: #59b9f5;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.footer {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 25px 0 8px;
+
+    color: #53656d;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    backdrop-filter: blur(5px);
+
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+
+    width: min(450px, 100%);
+
+    padding: 25px;
+
+    border: 1px solid #263a44;
+
+    border-radius: 12px;
+
+    background: #0c151c;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.5);
+}
+
+.modal-content h2 {
+    margin-bottom: 10px;
+
+    color: #edf5f6;
+
+    font-size: 18px;
+}
+
+.modal-content p {
+    color: #81939b;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+}
+
+.modal-close {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    width: 28px;
+    height: 28px;
+
+    border: 1px solid #273943;
+
+    border-radius: 50%;
+
+    background: #101c23;
+
+    color: #9aaab0;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.modal-close:hover {
+    color: #ffffff;
+
+    background: #172a33;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+    .sidebar {
+        width: 215px;
+        min-width: 215px;
+    }
+
+    .main-content {
+        width: calc(100% - 215px);
+        margin-left: 215px;
+    }
+
+    .design-area {
+        grid-template-columns: minmax(0, 1fr) 250px;
+    }
+
+    .material-callout {
+        width: 140px;
+    }
+
+}
+
+
+@media (max-width: 950px) {
+
+    .sidebar {
+        width: 190px;
+        min-width: 190px;
+    }
+
+    .main-content {
+        width: calc(100% - 190px);
+        margin-left: 190px;
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .design-area {
+        grid-template-columns: 1fr;
+    }
+
+    .information-panel {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .component-info-card {
+        grid-column: span 2;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+        min-width: 100%;
+
+        height: auto;
+
+        border-right: 0;
+        border-bottom: 1px solid #17242d;
+    }
+
+    .app {
+        display: block;
+    }
+
+    .main-content {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+    .sidebar-status {
+        margin-top: 15px;
+    }
+
+    .page-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .selected-design {
+        width: 100%;
+    }
+
+    .shoe-stage {
+        min-height: 520px;
+    }
+
+    .information-panel {
+        display: flex;
+    }
+
+    .component-info-card {
+        grid-column: auto;
+    }
+
+    .recommendation-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .recommendation-button {
+        width: 100%;
+
+        justify-content: center;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .main-content {
+        padding: 0 10px 20px;
+    }
+
+    .top-bar {
+        height: 55px;
+    }
+
+    .page-header h1 {
+        font-size: 24px;
+    }
+
+    .shoe-stage {
+        min-height: 450px;
+    }
+
+    .shoe-image-container {
+        width: 82%;
+        height: 65%;
+    }
+
+    .material-callout {
+        width: 125px;
+
+        padding: 9px;
+    }
+
+    .callout-title h3 {
+        font-size: 9px;
+    }
+
+    .material-list li {
+        font-size: 8px;
+    }
+
+    .callout-lining {
+        left: 3%;
+        top: 7%;
+    }
+
+    .callout-upper {
+        right: 3%;
+        left: auto;
+
+        top: 14%;
+    }
+
+    .callout-insole {
+        left: 3%;
+        bottom: 7%;
+    }
+
+    .callout-midsole {
+        left: 35%;
+        bottom: 2%;
+    }
+
+    .callout-outsole {
+        right: 2%;
+        bottom: 7%;
+    }
+
+    .callout-toe-cap {
+        right: 3%;
+        top: 40%;
+    }
+
+}

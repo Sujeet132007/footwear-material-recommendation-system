@@ -1,0 +1,77 @@
+Material_Name,Component,Grip,Comfort,Water_Resistance,Early_Drying,Lightweight,Durability
+Rubber,Outsole,Very High,High,Very High,High,Medium,Very High
+EVA_Foam,Midsole,Medium,Very High,High,Very High,Very High,Medium
+Polyurethane_PU,Outsole,High,High,High,High,High,Very High
+Thermoplastic_Rubber_TPR,Outsole,Very High,High,Very High,High,High,High
+Leather,Upper,Medium,Very High,Medium,Medium,Medium,High
+Canvas,Upper,Medium,High,Low,Medium,Very High,Medium
+Mesh_Fabric,Upper,Medium,Very High,Low,Very High,Very High,Low
+Vibram_Rubber,Outsole,Very High,Medium,Very High,High,Low,Very High
+Nitrile_Rubber,Outsole,Very High,Medium,Very High,High,Medium,Very High
+Neoprene,Lining,High,High,Very High,High,High,High
+Phylon,Midsole,High,Very High,High,High,Very High,Medium
+Cylindric_Gel,Insole,Medium,Very High,Medium,Medium,Medium,Medium
+Memory_Foam,Insole,Low,Very High,Low,Low,High,Low
+Suede,Upper,Medium,High,Low,Medium,Medium,Medium
+Nubuck_Leather,Upper,Medium,High,Medium,Medium,Medium,High
+Gore_Tex,Lining,High,High,Very High,Very High,High,Very High
+TPU_Plates,Toe Cap,High,Medium,High,High,Medium,Very High
+Microfiber_Leather,Upper,Medium,Very High,High,High,High,High
+Full_Grain_Leather,Upper,Medium,Very High,Medium,Low,Low,Very High
+Knit_Upper,Upper,Medium,Very High,Low,Very High,Very High,Low
+Carbon_Fiber_Plate,Toe Cap,High,Low,High,Very High,Very High,Very High
+E_TPU_Boost,Midsole,High,Very High,High,High,High,High
+Latex_Insole,Insole,Low,Very High,Low,Low,High,Low
+Cork,Insole,Medium,High,Medium,High,Very High,Medium
+Recycled_PET_Fabric,Upper,Medium,High,Medium,High,Very High,Medium
+Balata_Rubber,Outsole,Very High,Medium,Very High,High,Medium,Very High
+D3O_Impact_Foam,Insole,Medium,Very High,High,High,Medium,High
+Hypalon,Outsole,High,Medium,Very High,Very High,Medium,Very High
+Cordura_Nylon,Upper,Medium,Medium,High,High,High,Very High
+Synthetics_PU,Upper,Medium,High,High,High,High,Medium
+Raw_Hide,Upper,Medium,High,Medium,Medium,Medium,High
+Felt,Lining,Low,High,Low,Medium,High,Low
+Espadrille_Jute,Midsole,Low,Medium,Low,Medium,High,Low
+Wood_Sole,Outsole,Medium,Low,Medium,Medium,Low,High
+PVC,Outsole,High,Medium,Very High,High,Medium,High
+PORON_Foam,Insole,Medium,Very High,Medium,Medium,High,Medium
+Air_Cushion_Unit,Midsole,Medium,Very High,High,High,High,High
+Wool_Upper,Upper,Low,Very High,Low,Medium,High,Low
+Ripstop_Nylon,Upper,Medium,High,High,Very High,Very High,High
+Steel_Toe_Cap,Toe Cap,Low,Low,Very High,Very High,Low,Very High
+Composite_Toe_Cap,Toe Cap,Low,Low,Very High,Very High,High,Very High
+Aluminum_Toe_Cap,Toe Cap,Low,Low,Very High,Very High,High,Very High
+Fiberglass_Toe_Cap,Toe Cap,Low,Low,Very High,Very High,High,Very High
+Kevlar_Toe_Cap,Toe Cap,Low,Low,Very High,Very High,Very High,Very High
+TPU_Toe_Bumper,Toe Cap,Medium,Medium,Very High,High,High,Very High
+Rubber_Toe_Cap,Toe Cap,High,Medium,Very High,High,Medium,Very High
+Ortholite_Foam,Insole,Low,Very High,Medium,High,Very High,Medium
+PU_Molded_Insole,Insole,Medium,Very High,High,High,High,High
+Bamboo_Fabric_Insole,Insole,Low,Very High,Medium,High,Very High,Medium
+Gel_Heel_Pad,Insole,Low,Very High,Medium,Medium,Medium,High
+Poliyou_Foam,Insole,Medium,Very High,Medium,High,High,Medium
+Wool_Felt_Insole,Insole,Low,Very High,Low,Medium,High,Medium
+Microfiber_Insole,Insole,Medium,Very High,Medium,High,High,High
+Leather_Insole,Insole,Medium,High,Medium,Medium,Medium,High
+EVA_Molded_Insole,Insole,Medium,Very High,Medium,High,Very High,Medium
+Super_Critical_Foam,Midsole,High,Very High,High,Very High,Very High,High
+Compression_Molded_EVA,Midsole,Medium,Very High,High,High,Very High,High
+PU_Midsole,Midsole,High,High,High,High,Medium,Very High
+Lightstrike_Foam,Midsole,Medium,Very High,Medium,Very High,Very High,Medium
+Pebax_Foam,Midsole,High,Very High,High,Very High,Very High,High
+Double_Density_EVA,Midsole,Medium,Very High,High,High,High,High
+Gum_Rubber,Outsole,Very High,High,High,High,Medium,High
+Blown_Rubber,Outsole,High,High,High,High,High,Medium
+Studded_Rubber,Outsole,Very High,Medium,Very High,High,Medium,Very High
+Thermoplastic_Polyurethane,Outsole,High,High,Very High,High,High,Very High
+Recycled_Rubber,Outsole,High,Medium,Very High,High,Medium,High
+Leather_Outsole,Outsole,Medium,High,Low,Low,Medium,High
+Microfiber_Lining,Lining,Medium,Very High,Medium,High,Very High,Medium
+Cambrelle_Lining,Lining,Medium,High,Medium,Very High,High,High
+Fleece_Lining,Lining,Low,Very High,Low,Medium,High,Medium
+Thinsulate,Lining,Medium,Very High,High,High,High,High
+Pigskin_Lining,Lining,Medium,Very High,Medium,Medium,High,High
+Calfskin_Lining,Lining,Medium,Very High,Medium,Medium,High,High
+Ballistic_Nylon,Upper,Medium,Medium,High,Very High,High,Very High
+Flyknit_Mesh,Upper,Medium,Very High,Low,Very High,Very High,Low
+Synthetic_Suede,Upper,Medium,High,Medium,High,High,Medium

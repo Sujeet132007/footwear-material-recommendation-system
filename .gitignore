@@ -1,0 +1,26 @@
+
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.vscode/
+
+practice.ipynb
+practice.py
+tempCodeRunnerFile.py
+
+
+# Exclude images folder
+/static/images/
+
+# Exclude all JS files except final_page.js
+/static/js/*
+!/static/js/final_page.js
+
+
+# Exclude all JS files except final_page.js
+/templates/*
+!/templates/final_page.html
+
+/static/css/*
+!/static/css/final_page.css
